@@ -25,9 +25,12 @@
                     templateUrl: 'preface.sw?app=login',
                     controller: 'loginController'
                 })
-                .when('/uniquecode', {
+                .when('/uniquecode/23', {
                     templateUrl: 'preface.sw?app=main',
                     controller: 'uniquecode'
+                })
+                .otherwise({
+                    redirectTo: '/uniquecode/23'
                 });
             $locationProvider.html5Mode(true);
         })
