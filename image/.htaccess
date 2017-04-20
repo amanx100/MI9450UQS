@@ -6,7 +6,7 @@ Deny from all
 </Files>
 
 # Allow some special image files to view
-<FilesMatch "\.(ico|png|jpg|jpeg|gif|bmp|tif|tiff|svg|bmp)$">
+<FilesMatch "\.(ico|png|jpg|jpeg|gif|bmp|tif|tiff|svg)$">
    order deny,allow
    allow from all
  </FilesMatch>

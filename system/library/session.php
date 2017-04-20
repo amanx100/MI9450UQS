@@ -28,7 +28,7 @@ class Session {
 			
 			session_set_cookie_params(0, '/'.$path);
 			session_start();
-		}			
+		}
 	}
 
 	public function start($key = 'default', $value = '') {

@@ -1,8 +1,15 @@
+<?php
+    $session->destroy('UQS');
+?>
+
 <div layout="column" layout-align="center center" layout-fill>
     <div class="md-whiteframe-4dp" style="width: 500px;">
         <md-toolbar class="md-toolbar-tools">
             <h2>Login!</h2>
         </md-toolbar>
+
+        <md-progress-linear ng-disabled="prgs" class="md-warn" md-mode="indeterminate"></md-progress-linear>
+
         <md-content layout="column" class="md-padding">
             <form name="userForm" autocomplete="off">
                 <md-input-container class="md-block">
@@ -13,6 +20,7 @@
                         <div ng-message="pattern">This doesn't look like a valid userid!</div>
                     </div>
                 </md-input-container>
+
                 <md-input-container class="md-block">
                     <label>password</label>
                     <input type="password" name="userpassword" ng-model="userpassword" required>
@@ -21,11 +29,14 @@
                     </div>
                 </md-input-container>
 
+                <p style="text-align: center; color: {{messageColor}};" flex>{{message}}</p>
+
                 <div layout="row" layout-align="space-between center">
                     <md-button ng-disabled="!userForm.$valid" ng-click="login()" class="md-primary md-raised">Login</md-button>
                     <md-button>Need Help?</md-button>
                 </div>
             </form>
         </md-content>
+
     </div>
 </div>
