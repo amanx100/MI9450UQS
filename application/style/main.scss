@@ -4,3 +4,21 @@
   padding: 0;
 }
 
+.tbl-content {
+  width: 100%;
+  td:nth-child(1) {
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  td{
+    vertical-align: top;
+    padding: 10px 5px;
+  }
+}
+
+.tbl-account {
+  width: 100%;
+  td{
+    padding: 10px 0;
+  }
+}

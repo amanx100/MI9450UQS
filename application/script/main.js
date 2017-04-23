@@ -86,9 +86,24 @@
             };
         })
 
-        .controller('uqg', function ($scope, $routeParams, $http, userData) {
+        .controller('uqg', function ($scope, $routeParams, $location, $http, userData) {
             $scope.userFullName = userData.fullName;
+
+            $scope.schema_submit = function () {
+                alert($scope.separator.pos1);
+                console.log($scope);
+            };
+
+            $scope.logout = function () {
+                $http
+                    .post(addr + 'preface.sw?app=session', {'unset':true})
+                    .then(function (r) {
+                        window.location.reload();
+                    }, function () {
+                        alert('failed to connect server');
+                    });
+            }
             
         })
 
-})(angular, angular.element, 'http://localhost/MI9450UQS/');
+})(angular, angular.element, 'http://192.168.10.196:80/MI9450UQS/');

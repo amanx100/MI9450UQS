@@ -3,4 +3,18 @@
   margin: 0;
   padding: 0; }
 
+.tbl-content {
+  width: 100%; }
+  .tbl-content td:nth-child(1) {
+    white-space: nowrap;
+    text-transform: uppercase; }
+  .tbl-content td {
+    vertical-align: top;
+    padding: 10px 5px; }
+
+.tbl-account {
+  width: 100%; }
+  .tbl-account td {
+    padding: 10px 0; }
+
 /*# sourceMappingURL=main.css.map */
